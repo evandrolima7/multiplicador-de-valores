@@ -1,0 +1,43 @@
+<!doctype html> 
+<html lang="pt-br">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora multiplicacao</title>
+    <style>
+    body {
+      font: normal 18pt arial;
+      text-align: center;
+    }
+    input {
+      height: 50px;
+    }
+    input#botao {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Calculadora de multiplicação</h1>
+    <input type="number" name="tx1" id="tx1"> x
+    <input type="number" name="tx2" id="tx2">
+    <input type="button" value="multiplicar" onclick= "multiplicacao()" id="botao">
+    <div id="res">
+      Resultado
+    </div>
+    
+    <script>
+    function multiplicacao(){
+      var t1 = window.document.getElementById('tx1')
+      var t2 = window.document.getElementById('tx2')
+     var n1 = Number(t1.value)
+      var n2 = Number(t2.value)
+      s = n1*n2
+     var res = window.document.getElementById('res')
+      res.innerHTML = `A multiplicação entre o numero ${n1} e o numero ${n2} é igual a <strong>${s}</strong>`
+    }
+    </script>
+  </body>
+</html>
